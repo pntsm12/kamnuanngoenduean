@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="google-site-verification" content="BcwokyN2W4FMCCIj4YbvGcFCJojtQgojttCnNHCTtL4" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>คำนวณเงินเดือนสุทธิออนไลน์</title>
+<meta name="description" content="คำนวณเงินเดือนสุทธิออนไลน์ฟรี หักประกันสังคม ภาษี ณ ที่จ่าย รู้เงินที่ได้จริงต่อเดือน ใช้งานง่าย ไม่ต้องโหลดแอป">
+<meta name="keywords" content="คำนวณเงินเดือนสุทธิ, เงินเดือนสุทธิ, หักประกันสังคม, ภาษีเงินได้, เงินเดือน">
+<meta property="og:title" content="คำนวณเงินเดือนสุทธิออนไลน์">
+<meta property="og:description" content="คำนวณเงินเดือนสุทธิออนไลน์ฟรี หักประกันสังคม ภาษี ณ ที่จ่าย รู้เงินที่ได้จริง">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://pntsm12.github.io/kamnuanngoenduean/">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1063556443578237" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Noto+Serif+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#FFFFFF;--bg2:#F7F7F5;--bg3:#F0EFEC;
+  --border:#E4E4E0;--border2:#D4D4CF;
+  --text:#1A1917;--text2:#706F6B;--text3:#B0AFA9;
+  --ink:#1A1917;--accent:#2563EB;
+  --header-bg:rgba(255,255,255,0.92);--logo-fill:#1A1917;
+}
+[data-theme="dark"]{
+  --bg:#0F0F0F;--bg2:#1A1A1A;--bg3:#222222;
+  --border:#2A2A2A;--border2:#333333;
+  --text:#F0EFE8;--text2:#9A9890;--text3:#555450;
+  --ink:#F0EFE8;--accent:#60A5FA;
+  --header-bg:rgba(15,15,15,0.92);--logo-fill:#F0EFE8;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Sarabun',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;line-height:1.6;-webkit-font-smoothing:antialiased;transition:background .3s,color .3s;}
+header{position:sticky;top:0;z-index:100;background:var(--header-bg);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border);height:56px;display:flex;align-items:center;padding:0 20px;gap:10px;}
+.header-logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex:1;}
+.logo-icon svg{width:32px;height:32px;display:block;}
+.logo-text{display:flex;flex-direction:column;line-height:1.1;}
+.logo-text-th{font-family:'Noto Serif Thai',serif;font-size:16px;font-weight:700;color:var(--text);}
+.logo-text-en{font-size:10px;font-weight:500;color:var(--text3);letter-spacing:1.5px;text-transform:uppercase;}
+.dark-toggle{width:36px;height:36px;border:1.5px solid var(--border);border-radius:50%;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;color:var(--text2);flex-shrink:0;}
+.dark-toggle:hover{border-color:var(--border2);color:var(--text);}
+.ad-strip{background:var(--bg2);border-bottom:1px solid var(--border);display:flex;justify-content:center;padding:8px 16px;}
+.ad-728{width:100%;max-width:728px;height:90px;background:var(--bg);border:1.5px dashed var(--border2);border-radius:4px;display:flex;align-items:center;justify-content:center;color:var(--text3);font-size:12px;}
+@media(max-width:600px){.ad-728{height:60px;}}
+.ad-mid{display:flex;justify-content:center;margin:28px 0;}
+.page-wrap{max-width:640px;margin:0 auto;padding:36px 20px 64px;}
+.page-heading{margin-bottom:28px;}
+.page-heading h1{font-family:'Noto Serif Thai',serif;font-size:clamp(28px,6vw,40px);font-weight:700;color:var(--text);line-height:1.15;letter-spacing:-0.5px;}
+.page-heading p{margin-top:8px;font-size:15px;color:var(--text2);}
+.field-label{font-size:13px;font-weight:600;color:var(--text2);letter-spacing:0.3px;margin-bottom:8px;display:block;}
+.hint{font-size:12px;color:var(--text3);margin-bottom:12px;}
+hr.section-hr{border:none;border-top:1px solid var(--border);margin:20px 0;}
+.input-wrap{display:flex;align-items:center;border:1.5px solid var(--border);border-radius:8px;overflow:hidden;background:var(--bg);transition:border-color .15s,box-shadow .15s;margin-bottom:12px;}
+.input-wrap:focus-within{border-color:var(--accent);box-shadow:0 0 0 3px rgba(37,99,235,0.1);}
+.input-wrap input{flex:1;padding:11px 14px;border:none;outline:none;font-family:'Sarabun',sans-serif;font-size:20px;font-weight:600;color:var(--text);background:transparent;width:100%;}
+.input-wrap input::placeholder{color:var(--text3);font-weight:400;font-size:15px;}
+.input-suffix{padding:0 14px;font-size:13px;font-weight:600;color:var(--text3);border-left:1px solid var(--border);background:var(--bg2);min-height:46px;display:flex;align-items:center;white-space:nowrap;}
+.toggle-row{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:var(--bg2);border:1.5px solid var(--border);border-radius:8px;margin-bottom:10px;}
+.toggle-label{font-size:14px;font-weight:500;color:var(--text);}
+.toggle-sub{font-size:12px;color:var(--text3);}
+.toggle-switch{position:relative;width:44px;height:24px;flex-shrink:0;}
+.toggle-switch input{opacity:0;width:0;height:0;}
+.toggle-slider{position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background:var(--border2);border-radius:24px;transition:.3s;}
+.toggle-slider:before{position:absolute;content:"";height:18px;width:18px;left:3px;bottom:3px;background:white;border-radius:50%;transition:.3s;}
+input:checked+.toggle-slider{background:#22C55E;}
+input:checked+.toggle-slider:before{transform:translateX(20px);}
+.btn-calc{width:100%;margin-top:20px;padding:13px;background:var(--ink);color:var(--bg);border:none;border-radius:9px;font-family:'Sarabun',sans-serif;font-size:15px;font-weight:600;cursor:pointer;transition:opacity .15s,transform .1s;}
+.btn-calc:hover{opacity:0.85;}
+.btn-calc:active{transform:scale(0.99);}
+.btn-reset{width:100%;margin-top:8px;padding:11px;background:transparent;border:1.5px solid var(--border);border-radius:9px;font-family:'Sarabun',sans-serif;font-size:14px;color:var(--text2);cursor:pointer;transition:all .15s;}
+.btn-reset:hover{border-color:var(--border2);color:var(--text);}
+.result-box{display:none;margin-top:36px;animation:fadeUp .35s ease;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+.result-main{padding:32px 0 28px;border-top:1.5px solid var(--border);border-bottom:1.5px solid var(--border);margin-bottom:20px;}
+.result-label{font-size:12px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--text3);margin-bottom:6px;}
+.result-num{font-family:'Noto Serif Thai',serif;font-size:clamp(52px,13vw,80px);font-weight:700;color:var(--text);line-height:1;letter-spacing:-2px;}
+.result-unit{font-family:'Noto Serif Thai',serif;font-size:22px;font-weight:400;color:var(--text2);margin-left:6px;vertical-align:bottom;display:inline-block;margin-bottom:6px;}
+.result-sub{font-size:15px;color:var(--text2);margin-top:10px;}
+.result-sub strong{color:var(--text);font-weight:600;}
+.breakdown-card{background:var(--bg2);border:1.5px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:12px;}
+.breakdown-row{display:flex;align-items:center;justify-content:space-between;padding:13px 16px;border-bottom:1px solid var(--border);}
+.breakdown-row:last-child{border-bottom:none;}
+.breakdown-row.total{background:var(--bg3);font-weight:700;}
+.breakdown-label{font-size:14px;color:var(--text2);}
+.breakdown-label.total{color:var(--text);font-weight:700;}
+.breakdown-value{font-family:'Noto Serif Thai',serif;font-size:16px;font-weight:600;color:var(--text);}
+.breakdown-value.deduct{color:#E8607A;}
+.breakdown-value.net{color:var(--text);font-size:20px;}
+.stats-row{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1.5px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:12px;}
+.stat-cell{background:var(--bg);padding:16px;text-align:center;}
+.stat-num{font-family:'Noto Serif Thai',serif;font-size:20px;font-weight:700;color:var(--text);letter-spacing:-0.5px;line-height:1.1;}
+.stat-label{font-size:12px;color:var(--text3);margin-top:3px;}
+.share-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:12px;}
+.btn-share-action{padding:11px 8px;border-radius:9px;border:1.5px solid var(--border);background:transparent;font-family:'Sarabun',sans-serif;font-size:13px;font-weight:600;color:var(--text2);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s;}
+.btn-share-action:hover{border-color:var(--border2);color:var(--text);}
+.history-section{margin-top:32px;border-top:1px solid var(--border);padding-top:24px;}
+.history-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
+.history-title{font-size:13px;font-weight:600;color:var(--text2);}
+.btn-clear-history{font-size:12px;color:var(--text3);background:none;border:none;cursor:pointer;font-family:'Sarabun',sans-serif;}
+.btn-clear-history:hover{color:var(--text2);}
+.history-list{display:flex;flex-direction:column;gap:8px;}
+.history-item{background:var(--bg2);border:1.5px solid var(--border);border-radius:9px;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;}
+.history-item-left{flex:1;}
+.history-item-salary{font-family:'Noto Serif Thai',serif;font-size:18px;font-weight:700;color:var(--text);}
+.history-item-detail{font-size:12px;color:var(--text3);margin-top:2px;}
+.history-item-right{font-size:12px;color:var(--text3);}
+.history-empty{font-size:14px;color:var(--text3);text-align:center;padding:16px 0;}
+.info-section{border-top:1px solid var(--border);padding-top:32px;}
+.info-section h2{font-family:'Noto Serif Thai',serif;font-size:18px;font-weight:700;color:var(--text);margin-bottom:8px;}
+.info-section h2.mt{margin-top:24px;}
+.info-section p{font-size:14px;color:var(--text2);line-height:1.85;}
+footer{border-top:1px solid var(--border);padding:24px 20px;text-align:center;font-size:13px;color:var(--text3);}
+footer a{color:var(--text3);text-decoration:none;}
+footer a:hover{color:var(--text2);text-decoration:underline;}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--ink);color:var(--bg);padding:10px 20px;border-radius:8px;font-size:14px;font-weight:500;transition:transform .3s ease;z-index:999;pointer-events:none;}
+.toast.show{transform:translateX(-50%) translateY(0);}
+</style>
+</head>
+<body>
+
+<header>
+  <a class="header-logo" href="/">
+    <div class="logo-icon">
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="32" height="32" rx="7" fill="var(--logo-fill)"/>
+        <text x="5" y="24" font-family="Arial Black, sans-serif" font-size="22" font-weight="900" fill="var(--bg)">K</text>
+        <text x="14" y="27" font-family="Arial, sans-serif" font-size="8" font-weight="700" fill="var(--bg)">+×=</text>
+      </svg>
+    </div>
+    <div class="logo-text">
+      <span class="logo-text-th">คำนวณ</span>
+      <span class="logo-text-en">KAMNUAN</span>
+    </div>
+  </a>
+  <button class="dark-toggle" onclick="toggleDark()" title="เปลี่ยนธีม">
+    <svg id="iconSun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+      <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+      <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+    </svg>
+    <svg id="iconMoon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+    </svg>
+  </button>
+</header>
+
+<div class="ad-strip"><div class="ad-728">📢 Google AdSense — 728×90 Leaderboard (Top)</div></div>
+
+<div class="page-wrap">
+  <div class="page-heading">
+    <h1>คำนวณเงินเดือนสุทธิ</h1>
+    <p>รู้เงินที่ได้จริงหลังหักประกันสังคมและภาษี ณ ที่จ่าย</p>
+  </div>
+
+  <span class="field-label">เงินเดือนรวม (ก่อนหัก)</span>
+  <div class="input-wrap">
+    <input type="text" id="salary" placeholder="เช่น 30,000" inputmode="numeric"
+      oninput="fmtSalary(this)">
+    <span class="input-suffix">บาท/เดือน</span>
+  </div>
+
+  <hr class="section-hr">
+  <span class="field-label">การหักเพิ่มเติม <span style="color:var(--text3);font-weight:400;">(ถ้ามี)</span></span>
+
+  <div class="toggle-row">
+    <div>
+      <div class="toggle-label">ประกันสังคม 5%</div>
+      <div class="toggle-sub">หักสูงสุด 750 บาท/เดือน</div>
+    </div>
+    <label class="toggle-switch">
+      <input type="checkbox" id="toggleSSO" checked>
+      <span class="toggle-slider"></span>
+    </label>
+  </div>
+
+  <div class="toggle-row">
+    <div>
+      <div class="toggle-label">ภาษีเงินได้บุคคลธรรมดา</div>
+      <div class="toggle-sub">คำนวณจากอัตราก้าวหน้า (อนุมัติค่าลดหย่อนพื้นฐาน)</div>
+    </div>
+    <label class="toggle-switch">
+      <input type="checkbox" id="toggleTax" checked>
+      <span class="toggle-slider"></span>
+    </label>
+  </div>
+
+  <hr class="section-hr">
+  <span class="field-label">ค่าลดหย่อนเพิ่มเติมต่อปี <span style="color:var(--text3);font-weight:400;">(ไม่บังคับ)</span></span>
+  <div class="input-wrap">
+    <input type="text" id="extraDeduction" placeholder="เช่น 100,000" inputmode="numeric"
+      oninput="fmtSalary(this)">
+    <span class="input-suffix">บาท/ปี</span>
+  </div>
+  <p class="hint">ใส่ค่าลดหย่อนอื่นๆ เช่น ประกันชีวิต กองทุน RMF/LTF/SSF หรือดอกเบี้ยบ้าน</p>
+
+  <button class="btn-calc" onclick="calculate()">คำนวณ</button>
+  <button class="btn-reset" onclick="resetForm()">เริ่มใหม่</button>
+
+  <div class="result-box" id="resultBox">
+
+    <div class="result-main">
+      <div class="result-label">เงินเดือนสุทธิที่ได้รับ</div>
+      <div>
+        <span class="result-num" id="netSalary">–</span>
+        <span class="result-unit">บาท</span>
+      </div>
+      <div class="result-sub" id="resultSub"></div>
+    </div>
+
+    <!-- Breakdown -->
+    <div class="breakdown-card">
+      <div class="breakdown-row">
+        <span class="breakdown-label">เงินเดือนรวม</span>
+        <span class="breakdown-value" id="bd-gross">–</span>
+      </div>
+      <div class="breakdown-row">
+        <span class="breakdown-label">หักประกันสังคม (5%)</span>
+        <span class="breakdown-value deduct" id="bd-sso">–</span>
+      </div>
+      <div class="breakdown-row">
+        <span class="breakdown-label">หักภาษี ณ ที่จ่าย</span>
+        <span class="breakdown-value deduct" id="bd-tax">–</span>
+      </div>
+      <div class="breakdown-row total">
+        <span class="breakdown-label total">เงินเดือนสุทธิ</span>
+        <span class="breakdown-value net" id="bd-net">–</span>
+      </div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-cell">
+        <div class="stat-num" id="annualNet">–</div>
+        <div class="stat-label">รายได้สุทธิต่อปี (บาท)</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num" id="totalDeduct">–</div>
+        <div class="stat-label">หักรวมต่อเดือน (บาท)</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num" id="effectiveTaxRate">–</div>
+        <div class="stat-label">อัตราภาษีที่แท้จริง</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num" id="dailyNet">–</div>
+        <div class="stat-label">รายได้สุทธิต่อวัน (บาท)</div>
+      </div>
+    </div>
+
+    <div class="share-row">
+      <button class="btn-share-action" onclick="shareLine()">Line</button>
+      <button class="btn-share-action" onclick="shareFacebook()">Facebook</button>
+      <button class="btn-share-action" onclick="copyResult()">คัดลอก</button>
+    </div>
+  </div>
+
+  <div class="history-section">
+    <div class="history-header">
+      <span class="history-title">ประวัติการคำนวณ</span>
+      <button class="btn-clear-history" onclick="clearHistory()">ล้างประวัติ</button>
+    </div>
+    <div class="history-list" id="historyList">
+      <div class="history-empty">ยังไม่มีประวัติการคำนวณ</div>
+    </div>
+  </div>
+
+  <div class="ad-mid"><div class="ad-728">📢 Google AdSense — 728×90 Leaderboard (In-content)</div></div>
+
+  <div class="info-section">
+    <h2>วิธีคำนวณเงินเดือนสุทธิ</h2>
+    <p>เงินเดือนสุทธิ = เงินเดือนรวม – ประกันสังคม – ภาษีหัก ณ ที่จ่าย โดยประกันสังคมหักที่ 5% ของเงินเดือน สูงสุดไม่เกิน 750 บาทต่อเดือน ส่วนภาษีคำนวณจากรายได้สุทธิทั้งปีตามอัตราก้าวหน้า</p>
+    <h2 class="mt">ค่าลดหย่อนพื้นฐานที่ใช้คำนวณ</h2>
+    <p>ระบบนี้ใช้ค่าลดหย่อนพื้นฐานที่กฎหมายกำหนดได้แก่ ค่าลดหย่อนส่วนตัว 60,000 บาท ค่าใช้จ่าย 50% ของเงินได้สูงสุดไม่เกิน 100,000 บาท และเงินสมทบประกันสังคมทั้งปี ผลลัพธ์เป็นการประมาณการเบื้องต้นครับ</p>
+    <h2 class="mt">อัตราภาษีเงินได้บุคคลธรรมดา</h2>
+    <p>0–150,000 บาท ได้รับยกเว้น · 150,001–300,000 บาท อัตรา 5% · 300,001–500,000 บาท อัตรา 10% · 500,001–750,000 บาท อัตรา 15% · 750,001–1,000,000 บาท อัตรา 20% · 1,000,001–2,000,000 บาท อัตรา 25% · 2,000,001–5,000,000 บาท อัตรา 30% · มากกว่า 5,000,000 บาท อัตรา 35%</p>
+  </div>
+
+  <div class="ad-mid" style="margin-bottom:0;"><div class="ad-728">📢 Google AdSense — 728×90 Leaderboard (Bottom)</div></div>
+</div>
+
+<footer>
+  <p>© 2568 คำนวณเงินเดือนสุทธิออนไลน์ · <a href="#">นโยบายความเป็นส่วนตัว</a> · <a href="#">ติดต่อ</a></p>
+  <p style="margin-top:4px;">ผลลัพธ์เป็นการประมาณการเบื้องต้น ควรตรวจสอบกับฝ่ายบัญชีหรือสรรพากรสำหรับการยื่นภาษี</p>
+</footer>
+<div class="toast" id="toast">คัดลอกแล้ว!</div>
+
+<script>
+/* ── Dark mode ── */
+function initTheme(){const s=localStorage.getItem('theme');const p=window.matchMedia('(prefers-color-scheme: dark)').matches;applyTheme(s||(p?'dark':'light'));}
+function applyTheme(t){document.documentElement.setAttribute('data-theme',t);document.getElementById('iconSun').style.display=t==='dark'?'block':'none';document.getElementById('iconMoon').style.display=t==='light'?'block':'none';localStorage.setItem('theme',t);}
+function toggleDark(){applyTheme(document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark');}
+initTheme();
+
+let lastResult = null;
+
+function fmtSalary(el) {
+  const raw = el.value.replace(/[^0-9]/g,'');
+  if (!raw) { el.value=''; return; }
+  el.value = parseInt(raw).toLocaleString('th-TH');
+}
+
+function getRaw(id) {
+  return parseFloat(document.getElementById(id).value.replace(/,/g,'')) || 0;
+}
+
+function fmt(n) { return Math.round(n).toLocaleString('th-TH'); }
+function fmt2(n) { return n.toLocaleString('th-TH',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+
+/* ── Tax calculation ── */
+function calcAnnualTax(annualNetIncome) {
+  const brackets = [
+    {limit:150000,  rate:0},
+    {limit:300000,  rate:0.05},
+    {limit:500000,  rate:0.10},
+    {limit:750000,  rate:0.15},
+    {limit:1000000, rate:0.20},
+    {limit:2000000, rate:0.25},
+    {limit:5000000, rate:0.30},
+    {limit:Infinity,rate:0.35},
+  ];
+  let tax = 0;
+  let prev = 0;
+  for (const b of brackets) {
+    if (annualNetIncome <= prev) break;
+    const taxable = Math.min(annualNetIncome, b.limit) - prev;
+    tax += taxable * b.rate;
+    prev = b.limit;
+  }
+  return tax;
+}
+
+/* ── Calculate ── */
+function calculate() {
+  const gross = getRaw('salary');
+  if (!gross || gross <= 0) { alert('กรุณากรอกเงินเดือน'); return; }
+
+  const useSso = document.getElementById('toggleSSO').checked;
+  const useTax = document.getElementById('toggleTax').checked;
+  const extraDeduction = getRaw('extraDeduction');
+
+  // SSO
+  const ssoMonthly = useSso ? Math.min(gross * 0.05, 750) : 0;
+  const ssoAnnual  = ssoMonthly * 12;
+
+  // Annual income
+  const annualGross = gross * 12;
+
+  // Deductions for tax
+  const expenseDeduct  = Math.min(annualGross * 0.5, 100000);
+  const personalDeduct = 60000;
+  const annualNetIncome = Math.max(0, annualGross - expenseDeduct - personalDeduct - ssoAnnual - extraDeduction);
+
+  // Annual tax
+  const annualTax   = useTax ? calcAnnualTax(annualNetIncome) : 0;
+  const monthlyTax  = annualTax / 12;
+
+  // Net
+  const totalDeduct = ssoMonthly + monthlyTax;
+  const netSalary   = gross - totalDeduct;
+  const effectiveRate = gross > 0 ? (monthlyTax / gross * 100) : 0;
+
+  // Display
+  document.getElementById('netSalary').textContent = fmt(netSalary);
+  document.getElementById('resultSub').innerHTML   = `เงินเดือน <strong>${fmt(gross)}</strong> บาท · หักรวม <strong>${fmt(totalDeduct)}</strong> บาท`;
+  document.getElementById('bd-gross').textContent  = fmt(gross) + ' บาท';
+  document.getElementById('bd-sso').textContent    = useSso ? '−' + fmt(ssoMonthly) + ' บาท' : '−0 บาท';
+  document.getElementById('bd-tax').textContent    = useTax ? '−' + fmt2(monthlyTax) + ' บาท' : '−0 บาท';
+  document.getElementById('bd-net').textContent    = fmt(netSalary) + ' บาท';
+  document.getElementById('annualNet').textContent     = fmt(netSalary * 12);
+  document.getElementById('totalDeduct').textContent   = fmt(totalDeduct);
+  document.getElementById('effectiveTaxRate').textContent = effectiveRate.toFixed(1) + '%';
+  document.getElementById('dailyNet').textContent       = fmt(netSalary / 30);
+
+  lastResult = { gross, ssoMonthly, monthlyTax, netSalary, totalDeduct, effectiveRate };
+  saveHistory(lastResult);
+
+  const box = document.getElementById('resultBox');
+  box.style.display = 'block';
+  requestAnimationFrame(()=>box.scrollIntoView({behavior:'smooth',block:'nearest'}));
+}
+
+function resetForm() {
+  document.getElementById('salary').value = '';
+  document.getElementById('extraDeduction').value = '';
+  document.getElementById('toggleSSO').checked = true;
+  document.getElementById('toggleTax').checked = true;
+  document.getElementById('resultBox').style.display = 'none';
+}
+
+/* ── Share ── */
+function getShareText() {
+  if (!lastResult) return '';
+  const {gross, ssoMonthly, monthlyTax, netSalary} = lastResult;
+  return `คำนวณเงินเดือนสุทธิ\nเงินเดือน ${fmt(gross)} บาท\nหักประกันสังคม ${fmt(ssoMonthly)} บาท\nหักภาษี ${fmt(monthlyTax)} บาท\nเงินเดือนสุทธิ ${fmt(netSalary)} บาท\nhttps://pntsm12.github.io/kamnuanngoenduean/`;
+}
+function shareLine() { window.open('https://line.me/R/msg/text/?'+encodeURIComponent(getShareText()),'_blank'); }
+function shareFacebook() { window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('https://pntsm12.github.io/kamnuanngoenduean/'),'_blank'); }
+function copyResult() {
+  const text = getShareText().replace('https://pntsm12.github.io/kamnuanngoenduean/','kamnuanngoenduean.com');
+  navigator.clipboard.writeText(text).then(showToast).catch(()=>{const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);showToast();});
+}
+
+/* ── History ── */
+function saveHistory(result) {
+  const {gross, netSalary, totalDeduct} = result;
+  const item = {
+    salary: fmt(netSalary) + ' บาท',
+    detail: 'เงินเดือน ' + fmt(gross) + ' หัก ' + fmt(totalDeduct) + ' บาท',
+    time: new Date().toLocaleTimeString('th-TH',{hour:'2-digit',minute:'2-digit'})
+  };
+  let h = JSON.parse(localStorage.getItem('salaryHistory')||'[]');
+  h.unshift(item); h = h.slice(0,5);
+  localStorage.setItem('salaryHistory', JSON.stringify(h));
+  renderHistory();
+}
+
+function renderHistory() {
+  const list = document.getElementById('historyList');
+  const h = JSON.parse(localStorage.getItem('salaryHistory')||'[]');
+  if (!h.length) { list.innerHTML='<div class="history-empty">ยังไม่มีประวัติการคำนวณ</div>'; return; }
+  list.innerHTML = h.map(item=>`
+    <div class="history-item">
+      <div class="history-item-left">
+        <div class="history-item-salary">สุทธิ ${item.salary}</div>
+        <div class="history-item-detail">${item.detail}</div>
+      </div>
+      <div class="history-item-right">${item.time}</div>
+    </div>`).join('');
+}
+
+function clearHistory() { localStorage.removeItem('salaryHistory'); renderHistory(); }
+function showToast() { const t=document.getElementById('toast'); t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),2500); }
+
+renderHistory();
+</script>
+</body>
+</html>
